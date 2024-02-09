@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  hello1:
+    build: .
+    image: hello:latest
+    volumes: ['./hello:/usr/src/app/hello']
+    command: [python, ./main.py, -r, '3']
+  hello2:
+    build: .
+    image: hello:latest
+    volumes: ['./hello:/usr/src/app/hello']
+    command: [python, ./main.py, -r, '4']
